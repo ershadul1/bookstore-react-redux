@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './components/App';
 import getRandomId from './helpers/getRandomId';
-import rootReducer from './reducers/index';
+import rootReducer from './reducers/books';
 
 const initialState = {
   allBooks: [
