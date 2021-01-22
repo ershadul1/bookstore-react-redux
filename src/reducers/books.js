@@ -1,14 +1,18 @@
 const books = (state = {}, action) => {
-  const updated = { ...state };
   switch (action.type) {
     case 'CREATE_BOOK':
-      break;
+      return {
+        ...state,
+        allBooks: [...state.allBooks, action.book],
+      };
     case 'REMOVE_BOOK':
-      break;
+      return {
+        ...state,
+        allBooks: state.allBooks.filter(book => book.bookId !== action.bookId),
+      };
     default:
-      break;
+      return state;
   }
-  return updated;
 };
 
 export default books;
