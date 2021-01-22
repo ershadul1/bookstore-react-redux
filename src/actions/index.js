@@ -3,9 +3,9 @@ const CREATE_BOOK = book => ({
   book,
 });
 
-const REMOVE_BOOK = book => ({
+const REMOVE_BOOK = bookId => ({
   type: 'REMOVE_BOOK',
-  book,
+  bookId,
 });
 
 export { CREATE_BOOK, REMOVE_BOOK };
