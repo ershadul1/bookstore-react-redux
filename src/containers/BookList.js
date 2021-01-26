@@ -23,29 +23,17 @@ const BookList = state => {
 
   return (
     <>
-      <p>BookList</p>
+      <h3>Filter</h3>
       <CategoryFilter filter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Delete book</th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.map(item => (
-            <Book
-              key={item.bookId}
-              bookId={item.bookId}
-              bookTitle={item.bookTitle}
-              bookCategory={item.bookCategory}
-              remove={handleRemoveBook}
-            />
-          ))}
-        </tbody>
-      </table>
+      {books.map(item => (
+        <Book
+          key={item.bookId}
+          bookId={item.bookId}
+          bookTitle={item.bookTitle}
+          bookCategory={item.bookCategory}
+          remove={handleRemoveBook}
+        />
+      ))}
     </>
   );
 };

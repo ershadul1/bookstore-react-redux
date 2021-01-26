@@ -28,18 +28,19 @@ const BooksForm = props => {
   };
   return (
     <>
-      <p>BooksForm</p>
-      <form>
-        <input placeholder="Title" name="bookTitle" onChange={handleChange} />
-        <select name="bookCategory" onChange={handleChange}>
+      <h2 className="add-new-book">ADD NEW BOOK</h2>
+      <form className="add-book-form">
+        <input className="input-book-title" placeholder="Book title" name="bookTitle" onChange={handleChange} />
+        <select className="select-category" name="bookCategory" onChange={handleChange}>
+          <option value="" disabled selected>Category</option>
           {categories.map(item => (
             <option key={item} value={item}>
               {item}
             </option>
           ))}
         </select>
-        <button type="button" value="submit" onClick={handleSubmit}>
-          Submit
+        <button className="submit-btn" type="button" value="submit" onClick={handleSubmit}>
+          ADD BOOK
         </button>
       </form>
     </>

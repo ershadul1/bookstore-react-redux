@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import categories from '../constants';
 
 const CategoryFilter = ({ filter }) => (
-  <select onChange={filter}>
+  <select className="category-filter" onChange={filter}>
     <option value="All">All</option>
     {categories.map(item => (
       <option key={item} value={item}>
