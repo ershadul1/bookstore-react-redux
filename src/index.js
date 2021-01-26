@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './components/App';
 import getRandomId from './helpers/getRandomId';
-import rootReducer from './reducers/books';
+import rootReducer from './reducers/index';
 
 const initialState = {
   allBooks: [
@@ -17,6 +17,7 @@ const initialState = {
     { bookId: getRandomId(), bookTitle: 'Learning How to Learn', bookCategory: 'Learning' },
     { bookId: getRandomId(), bookTitle: 'Frankenstein', bookCategory: 'Sci-Fi' },
   ],
+  filter: '',
 };
 
 const store = createStore(rootReducer, initialState);
