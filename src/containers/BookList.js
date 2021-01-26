@@ -5,7 +5,7 @@ import CategoryFilter from '../components/CategoryFilter';
 
 const BookList = state => {
   const filterBooks = () => {
-    if (state.filter === '') {
+    if (state.filter === 'All') {
       return state.allBooks;
     }
     return state.allBooks.filter(book => book.bookCategory === state.filter);

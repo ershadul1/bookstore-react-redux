@@ -17,7 +17,7 @@ const initialState = {
     { bookId: getRandomId(), bookTitle: 'Learning How to Learn', bookCategory: 'Learning' },
     { bookId: getRandomId(), bookTitle: 'Frankenstein', bookCategory: 'Sci-Fi' },
   ],
-  filter: '',
+  filter: 'All',
 };
 
 const store = createStore(rootReducer, initialState);

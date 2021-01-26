@@ -3,7 +3,7 @@ import categories from '../constants';
 
 const CategoryFilter = ({ filter }) => (
   <select onChange={filter}>
-    <option value="">All</option>
+    <option value="All">All</option>
     {categories.map(item => (
       <option key={item} value={item}>
         {item}
