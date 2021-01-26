@@ -3,22 +3,13 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { CREATE_BOOK } from '../actions/index';
 import getRandomId from '../helpers/getRandomId';
+import categories from '../constants';
 
 const BooksForm = props => {
   const [state, setState] = useState({
     bookTitle: null,
     bookCategory: 'Action',
   });
-
-  const categories = [
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
 
   const handleChange = e => {
     const { value } = e.target;
