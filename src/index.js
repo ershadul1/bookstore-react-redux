@@ -24,7 +24,6 @@ const store = createStore(rootReducer, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Bookstore</h1>
     <Provider store={store}>
       <App />
     </Provider>

@@ -20,26 +20,28 @@ const BooksForm = props => {
   };
 
   const handleSubmit = () => {
-    const newBook = {
-      bookId: getRandomId(),
-      ...state,
-    };
-    props.createBook(newBook);
+    if (state.bookTitle) {
+      const newBook = {
+        bookId: getRandomId(),
+        ...state,
+      };
+      props.createBook(newBook);
+    }
   };
   return (
     <>
-      <p>BooksForm</p>
-      <form>
-        <input placeholder="Title" name="bookTitle" onChange={handleChange} />
-        <select name="bookCategory" onChange={handleChange}>
+      <h2 className="add-new-book">ADD NEW BOOK</h2>
+      <form className="add-book-form">
+        <input required="required" className="input-book-title" placeholder="Book title" name="bookTitle" onChange={handleChange} />
+        <select className="select-category" name="bookCategory" onChange={handleChange}>
           {categories.map(item => (
             <option key={item} value={item}>
               {item}
             </option>
           ))}
         </select>
-        <button type="button" value="submit" onClick={handleSubmit}>
-          Submit
+        <button className="submit-btn" type="button" value="submit" onClick={handleSubmit}>
+          ADD BOOK
         </button>
       </form>
     </>

@@ -1,6 +1,10 @@
 # Bookstore-React-Redux
 Frontend of a bookstore. Built with React-Redux.
 
+## Screenshot 
+
+![](./src/assests/images/screenshot.png)
+
 ## Built With
 
 - React
