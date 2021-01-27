@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Book = props => {
-  const {
-    bookId, bookTitle, bookCategory, remove,
-  } = props;
-
+const Book = ({ bookId, bookTitle, bookCategory, remove }) => {
   return (
     <>
       <div className="book-card">
