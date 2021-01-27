@@ -32,7 +32,6 @@ const BooksForm = props => {
       <form className="add-book-form">
         <input className="input-book-title" placeholder="Book title" name="bookTitle" onChange={handleChange} />
         <select className="select-category" name="bookCategory" onChange={handleChange}>
-          <option value="" disabled selected>Category</option>
           {categories.map(item => (
             <option key={item} value={item}>
               {item}
